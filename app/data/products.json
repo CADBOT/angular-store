@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "T shirt",
+    "cost": 4,
+    "category": "clothing"
+  },
+  {
+    "id": 1,
+    "name": "pants",
+    "cost": 20,
+    "category": "clothing"
+  },
+  {
+    "id": 2,
+    "name": "milk",
+    "cost": 3,
+    "category": "food"
+  }
+]

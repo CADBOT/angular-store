@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" ng-app="storeApp">
+<head>
+  <meta charset="utf-8">
+  <title>Shop</title>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="ShopCtrl as shop">
+  <h1> Welcome to our shop</h1>
+  <h2 ng-bind-template="You are viewing {{shop.viewCategory}}"></h2>
+  <ul>
+    <li ng-repeat="product in shop.products | filter:shop.viewCategory">
+      <span> Name: {{product.name}} </span>
+      <span> Category: {{product.category}} </span>
+      <span> Cost: {{product.cost | currency}} </span>
+    </li>
+  </ul>
+  <span ng-bind-template="Number of products in category: {{shop.numProducts()}}"></span>
+  <p> {{shop.numProducts}} </p>
+  <select ng-model="shop.viewCategory">
+    <option value="clothing">clothing</option>
+    <option value="food">food</option>
+  </select
+</body>
+</html>
