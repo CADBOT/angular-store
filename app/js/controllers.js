@@ -1,7 +1,9 @@
 'use strict';
 var storeApp = angular.module('storeApp', []);
 
-storeApp.controller('ShopCtrl', ['$http', function($http) {
+storeApp.controller('ShopController', ['$http',  ShopController]);
+
+function ShopController ($http) {
   var vm = this;
   vm.viewCategory = 'clothing';
   vm.products = [];
@@ -13,4 +15,4 @@ storeApp.controller('ShopCtrl', ['$http', function($http) {
       return product.category == vm.viewCategory;
     }).length;
   };
-}]);
+}
